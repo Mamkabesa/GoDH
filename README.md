@@ -1,9 +1,8 @@
-<div align="center">
-# GoDH
+<p align="center">
+  <b>GoDH</b><br>
+  <a href="#english">English</a> | <a href="#russian">Русский</a>
+</p>
 
-English | Русский
-
-</div>
 Tunnels Dahua P2P camera ports (by serial number) to localhost via the DH "Dahua HTTP P2P" cloud protocol. Essentially a drop-in replacement for the original Python script — rewritten in Go, fully CLI-compatible.
 
 Just one dependency — `golang.org/x/crypto`.
