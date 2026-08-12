@@ -1,5 +1,12 @@
-# GoDH
+<div align="center">
 
+<h1>GoDH</h1>
+
+<p>
+  <a href="./README.md">English</a> | <a href="./README_RU.md">Русский</a>
+</p>
+
+</div>
 Прокидывает порты P2P-камеры Dahua (по серийнику) на localhost через облачный протокол DH «Dahua HTTP P2P». По сути — замена оригинального Python-скрипта, но на Go и с полной совместимостью по CLI.
 
 Зависимость всего одна — `golang.org/x/crypto`.
