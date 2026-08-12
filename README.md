@@ -3,7 +3,7 @@
 <h1>GoDH</h1>
 
 <p>
-  <b>English</b> | <a href="./README_RU.md">Русский</a>
+  <b>English</b> | <a href="./README_ru.md">Русский</a>
 </p>
 
 </div>
