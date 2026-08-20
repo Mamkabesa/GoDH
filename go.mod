@@ -1,4 +1,4 @@
-module godh
+module dh-fwd
 
 go 1.22
 

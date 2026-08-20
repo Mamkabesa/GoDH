@@ -1,5 +1,5 @@
 /*
- * decode.go — offline packet dissector (godh --decode).
+ * decode.go — offline packet dissector (dh-fwd --decode).
  *
  * Takes raw hex from argv or stdin and pretty-prints a single protocol
  * layer, selected with -T:

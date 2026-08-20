@@ -175,7 +175,7 @@ func (r *PortRegistry) failEntries() []failEntry {
 }
 
 func main() {
-	// Python-compatible: allow serial before flags, e.g. "godh <serial> --port ...".
+	// Python-compatible: allow serial before flags, e.g. "dh-fwd <serial> --port ...".
 	// The serial is moved to the end of os.Args so flag parsing sees only flags.
 	if len(os.Args) > 1 && !strings.HasPrefix(os.Args[1], "-") {
 		serial := os.Args[1]
@@ -228,7 +228,7 @@ func main() {
 		} else {
 			stat, _ := os.Stdin.Stat()
 			if (stat.Mode() & os.ModeCharDevice) != 0 {
-				fmt.Fprintln(os.Stderr, "usage: godh --decode [--decode-type type] <hex>")
+				fmt.Fprintln(os.Stderr, "usage: dh-fwd --decode [--decode-type type] <hex>")
 				os.Exit(1)
 			}
 			buf := make([]byte, 65536)
@@ -278,7 +278,7 @@ func main() {
 
 // usage prints a grouped, human-readable flag reference to stderr.
 func usage() {
-	fmt.Fprintf(os.Stderr, `Usage: godh [options] <serial>
+	fmt.Fprintf(os.Stderr, `Usage: dh-fwd [options] <serial>
 
 Tunnels ports of a Dahua P2P camera (identified by its serial number) to
 localhost over the DH "Dahua HTTP P2P" cloud protocol. The serial may be
@@ -306,9 +306,9 @@ Decode:
   --decode-type, -T <t>   packet layer: auto, dhttp, istun, ptcp (default "auto")
 
 Examples:
-  godh 4E0743BPAGFE388 -p 5080,5081:80,81
-  godh 4E0743BPAGFE388 -t 1 -u admin -P secret -p 5080:554
-  godh -D -T ptcp 01000f12...
+  dh-fwd 4E0743BPAGFE388 -p 5080,5081:80,81
+  dh-fwd 4E0743BPAGFE388 -t 1 -u admin -P secret -p 5080:554
+  dh-fwd -D -T ptcp 01000f12...
 `)
 }
 
